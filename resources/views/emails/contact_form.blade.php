@@ -30,9 +30,9 @@
             line-height: 1.6;
             margin: 10px 0;
         }
-        strong {
+        /* strong {
             color: #4CAF50;
-        }
+        } */
     </style>
 </head>
 <body>
