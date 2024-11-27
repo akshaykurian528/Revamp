@@ -6,41 +6,68 @@
     <title>Contact Form Submission</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f9f9f9;
         }
         .email-container {
             width: 100%;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
             background-color: #ffffff;
-            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #ddd;
         }
-        h2 {
-            color: #333;
+        .header {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #007bff;
+            color: #ffffff;
             text-align: center;
-            margin-bottom: 20px;
+            padding: 20px;
+            font-size: 24px;
         }
-        p {
+        .content {
+            font-family: "Courier New", Courier, monospace;
+            padding: 20px;
+        }
+        .content p {
             font-size: 16px;
             line-height: 1.6;
             margin: 10px 0;
+            color: #555;
         }
-        /* strong {
-            color: #4CAF50;
-        } */
+        .content p strong {
+            color: #333;
+        }
+        .footer {
+            font-family: "Courier New", Courier, monospace;
+            text-align: center;
+            background-color: #f1f1f1;
+            color: #555;
+            padding: 15px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
     <div class="email-container">
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> {{ is_string($name) ? $name : 'Not a string' }}</p>
-        <p><strong>Email:</strong> {{ is_string($email) ? $email : 'Not a string' }}</p>
-        <p><strong>Message:</strong> {{ is_string($msg) ? $msg : 'Not a string' }}</p>
+        <div class="header">
+            <strong>New Message</strong>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <p><strong>Name:</strong> {{ is_string($name) ? $name : 'Not a string' }}</p>
+            <p><strong>Email:</strong> {{ is_string($email) ? $email : 'Not a string' }}</p>
+            <p><strong>Message:</strong> {{ is_string($msg) ? $msg : 'Not a string' }}</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2024 Revamp. All rights reserved.    
+        </div>
     </div>
 </body>
 </html>
