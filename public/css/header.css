@@ -1,0 +1,32 @@
+/* Basic styles for the navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; /* Adjust background color */
+}
+
+/* Styling for the logo */
+nav .logo a {
+    font-size: 24px;
+    color: white; /* Logo color */
+    text-decoration: none;
+}
+
+/* Styling for the nav items */
+nav .nav-items {
+    display: flex;
+}
+
+nav .nav-items a {
+    margin-left: 20px;
+    font-size: 18px;
+    color: white; /* Text color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav .nav-items a:hover {
+    color: #f0a500; /* Hover effect color */
+}

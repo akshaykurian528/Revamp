@@ -1,0 +1,43 @@
+/* Widget container styling */
+.whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  /* WhatsApp icon styling */
+  .whatsapp-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .whatsapp-icon img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* QR code styling (hidden by default) */
+  .qr-code {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .qr-code img {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Hover effect to show QR code */
+  .whatsapp-icon:hover .qr-code {
+    display: block;
+  }
+  
