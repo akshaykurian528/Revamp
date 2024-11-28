@@ -27,17 +27,26 @@
 
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="text" id="name" name="name" placeholder="Your Name" value="{{ old('name') }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Your Mobile Number" value="{{ old('mobile') }}" required 
+                    pattern="^[0-9]{10}$" title="Please enter a valid 10-digit mobile number.">
+                @error('mobile')
+                    <div class="error-message">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" value="{{ old('email') }}" required>
             </div>
 
             <div class="form-group">
                 <label for="msg">Message</label>
-                <textarea id="msg" name="msg" placeholder="Your Message" rows="5" required></textarea>
+                <textarea id="msg" name="msg" placeholder="Your Message" rows="5" required>{{ old('msg') }}</textarea>
             </div>
 
             <button type="submit" class="submit-btn">Submit</button>

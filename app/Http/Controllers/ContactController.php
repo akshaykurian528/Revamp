@@ -14,15 +14,19 @@ class ContactController extends Controller
         // Validate form data
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'mobile' => 'required|regex:/^[0-9]{10}$/|max:255', 
+            'email' => 'required|email|max:255',  
             'msg' => 'required|string|max:10000',
+        ], [
+            'mobile.required' => 'The mobile number is required.',
+            'mobile.regex' => 'The mobile number must be exactly 10 digits.',
         ]);
 
         // Log the validated data to check its contents
         Log::info('Validated Form Data:', $validatedData);
 
-        // Send email with the validated data
-        Mail::to('akshaykurian825@gmail.com')->send(new ContactFormMail($validatedData));
+        // Send the email through the queue
+        Mail::to('stratosdevintern@gmail.com')->send(new ContactFormMail($validatedData));
 
         // Redirect back to the form with a success message and prevent caching
         return redirect()->route('contact')

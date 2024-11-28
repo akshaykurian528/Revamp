@@ -60,6 +60,7 @@
         <!-- Content -->
         <div class="content">
             <p><strong>Name:</strong> {{ is_string($name) ? $name : 'Not a string' }}</p>
+            <p><strong>Mobile:</strong> {{ is_string($mobile) ? $mobile : 'Not a string' }}</p>
             <p><strong>Email:</strong> {{ is_string($email) ? $email : 'Not a string' }}</p>
             <p><strong>Message:</strong> {{ is_string($msg) ? $msg : 'Not a string' }}</p>
         </div>
