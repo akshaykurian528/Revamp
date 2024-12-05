@@ -7,7 +7,7 @@
 </head>
 <body>
     <x-header></x-header>
-    {{$slot}}
+        {{$slot}}
     <x-footer></x-footer>
 </body>
 </html>
