@@ -1,3 +1,20 @@
+.t-sec {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  align-items: center;
+}
+
+.t-sec-head h2{
+  font-size: 48px;
+}
+
+.t-sec-head h3{
+  font-size: 16px;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
 /* Adjust slider container classes */
 .images-slider,
 .reviews-slider {
@@ -5,11 +22,43 @@
   overflow: hidden;
 }
 
+.reviews-slider {
+  height: 330px;
+  overflow: hidden;
+  align-items: center;
+}
+
 .testimonials-section {
   display: flex;
   position: relative;
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  gap: 80px;
+}
+
+/* Add spacing to elements within each swiper-slide */
+.reviews-slider .swiper-slide .name {
+  margin-bottom: 20px; /* Space below the name container */
+}
+
+.reviews-slider .swiper-slide .review {
+  margin-bottom: 20px; /* Space below the review container */
+}
+
+.reviews-slider .swiper-slide .other-details {
+  margin-top: 20px; /* Optional: Space above the other-details container */
+}
+
+.review p {
+  color: grey;
+  line-height: 20px;
+}
+
+
+.star{
+  margin-bottom: 5px;
 }
 
 .swiper-slide img {
@@ -19,7 +68,7 @@
 
 .reviews-slider .swiper-slide {
   padding: 40px;
-  background-color: #f9f9f9;
+  background-color:  #7cfc04;
 }
 
 .navigation-arrows {

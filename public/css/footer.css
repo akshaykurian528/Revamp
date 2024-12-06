@@ -5,6 +5,12 @@
     padding: 20px 0;
     font-family: Arial, sans-serif;
   }
+
+  .footer-logo img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
   
   .footer-container {
     display: flex;

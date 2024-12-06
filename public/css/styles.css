@@ -65,6 +65,14 @@ p{
     font-family: helvetica_condensed_oblique;
 }
 
-section {
-    margin-bottom: 50px;  
+a{
+    font-family: helvetica;
 }
+
+li{
+    font-family: helvetica;
+}
+
+/* section {
+    margin-bottom: 50px;  
+} */

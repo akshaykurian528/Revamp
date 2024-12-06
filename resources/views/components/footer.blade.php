@@ -3,7 +3,7 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-logo">
-      <h2>YourLogo</h2>
+      <img src="{{ asset('images/revamp-logo-mark.png') }}" alt="Revamp Logo">
     </div>
     <div class="footer-links">
       <ul>
